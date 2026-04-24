@@ -9,7 +9,7 @@ export const Loader = () => {
       setCount((prev) => {
         if (prev >= 100) {
           clearInterval(timer);
-          setTimeout(() => setIsVisible(false));
+          setTimeout(() => setIsVisible(false), 500);
           return 100;
         }
         return prev + 1;

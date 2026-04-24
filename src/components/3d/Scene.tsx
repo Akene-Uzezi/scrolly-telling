@@ -6,7 +6,7 @@ import { Mesh } from "three";
 export const Scene = () => {
   const meshRef = useRef<Mesh>(null!);
   const { scrollYProgress } = useScroll();
-  const rotationY = useTransform(scrollYProgress, [0, 1], [Math.PI * 5]);
+  const rotationY = useTransform(scrollYProgress, [0, 1], [0, Math.PI * 5]);
   const positionZ = useTransform(scrollYProgress, [0, 0.5, 1], [0, 2, -2]);
   useFrame(() => {
     if (meshRef.current) {
